@@ -2,7 +2,9 @@ package gui.large_components;
 
 import gui.basic_components.CheckBox;
 import gui.basic_components.GuiObject;
+import gui.basic_components.TextBox;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,7 @@ public class HorizontalBar extends JPanel {
 	}
 	
 	private void initialize(){
+		addTextBox("TextBox One");
 		addCheckBox("Test One");
 		addCheckBox("Test Two");
 		addCheckBox("Test Three");
@@ -49,5 +52,11 @@ public class HorizontalBar extends JPanel {
 		CheckBox checkbox = new CheckBox(s);
 		componentList.add(checkbox);
 		this.add(checkbox);
+	}
+	
+	private void addTextBox(String s){
+		TextBox textbox = new TextBox(s);
+		componentList.add(textbox);
+		this.add(textbox);
 	}
 }

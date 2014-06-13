@@ -1,5 +1,6 @@
 package gui;
 
+import gui.basic_components.SpacingFactory;
 import gui.large_components.HorizontalBar;
 
 import java.awt.Dimension;
@@ -11,7 +12,10 @@ import javax.swing.JFrame;
 
 public class FullRecipeGUI extends JFrame {
 
-	private static final Dimension MINIMUM_SIZE_CONSTANT = new Dimension(300,300);
+	private static final Dimension PANEL_SPACING_SIZE_CONSTANT = new Dimension(0,10);
+	private static final int SPACING_HEIGHT_CONSTANT = 10;
+	private static final int SPACING_WIDTH_CONSTANT = 0;
+	private static final Dimension MINIMUM_SIZE_CONSTANT = new Dimension(600,300);
 	private List<HorizontalBar> myBars;
 
 	public static void main(String[] args) {
@@ -37,8 +41,9 @@ public class FullRecipeGUI extends JFrame {
 
 	private void initialize() {
 		add(new HorizontalBar());
+		add(SpacingFactory.verticalSpacerPanel(PANEL_SPACING_SIZE_CONSTANT));
 		add(new HorizontalBar());
-		
+		add(SpacingFactory.verticalSpacerPanel(PANEL_SPACING_SIZE_CONSTANT));
 		validate();
 	}
 }

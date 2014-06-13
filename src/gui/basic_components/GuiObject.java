@@ -1,5 +1,7 @@
 package gui.basic_components;
 
+import java.awt.Dimension;
+
 import javax.swing.BoxLayout;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
