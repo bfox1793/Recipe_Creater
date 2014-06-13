@@ -11,7 +11,7 @@ public class CheckBox extends GuiObject{
 
 	public CheckBox(String label){
 		super(label,new JCheckBox());
-		setObjectLayout(VERTICAL_LAYOUT_CONSTANT);
+		//setObjectLayout(VERTICAL_LAYOUT_CONSTANT);
 	}
 
 	@Override
