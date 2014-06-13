@@ -32,6 +32,7 @@ public class FullRecipeGUI extends JFrame {
 		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		setVisible(true);
 		setMinimumSize(MINIMUM_SIZE_CONSTANT);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 	private void initialize() {
