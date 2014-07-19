@@ -2,6 +2,7 @@ package gui;
 
 import gui.basic_components.SpacingFactory;
 import gui.large_components.IngredientsBar;
+import gui.large_components.OptionsMenu;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -37,13 +38,14 @@ public class FullRecipeGUI extends JFrame {
 		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		setVisible(true);
 		setMinimumSize(MINIMUM_SIZE_CONSTANT);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}
 
 	private void initialize() {
 		addIngredient();
 		addIngredient();
 		add(addIngredientButton());
+		this.setJMenuBar(new OptionsMenu());
 		validate();
 	}
 	
@@ -53,7 +55,8 @@ public class FullRecipeGUI extends JFrame {
 		add(currentIngredient);
 		add(SpacingFactory.verticalSpacerPanel(PANEL_SPACING_SIZE_CONSTANT));
 	}
-	public JButton addIngredientButton(){
+	
+	private JButton addIngredientButton(){
 		JButton button = new JButton(ADD_INGREDIENT_CONSTANT);
 		
 		button.addActionListener(new ActionListener(){
@@ -69,10 +72,6 @@ public class FullRecipeGUI extends JFrame {
 		
 		myIngredientButton = button;
 		return button;
-	}
-	
-	public JButton getIngredientButton(){
-		return myIngredientButton;
 	}
 	
 }
