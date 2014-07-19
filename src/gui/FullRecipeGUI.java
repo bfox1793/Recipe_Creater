@@ -45,7 +45,7 @@ public class FullRecipeGUI extends JFrame {
 		addIngredient();
 		addIngredient();
 		add(addIngredientButton());
-		this.setJMenuBar(new OptionsMenu());
+		this.setJMenuBar(new OptionsMenu(this));
 		validate();
 	}
 	
