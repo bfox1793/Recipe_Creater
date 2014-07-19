@@ -12,20 +12,16 @@ import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class HorizontalBar extends JPanel {
+public class IngredientsBar extends JPanel {
 	
 	private List<GuiObject> componentList;
 	
-	//public static void main(String[] args){
-	//	new HorizontalBar();
-	//}
-
 	/**
 	 * Bar that lists the type of measurements that the user wants. This is used
 	 * to have the user select the type of measurement that they would like to
 	 * select for the ingredient they are creating.
 	 */
-	public HorizontalBar() {
+	public IngredientsBar() {
 		componentList = new ArrayList<GuiObject>();
 		setDefaultSettings();
 		initialize();
